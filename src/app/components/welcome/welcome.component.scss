@@ -82,6 +82,7 @@
     align-items: center;
     gap: clamp(2rem, 7vw, 8rem);
     width: min(100%, 1300px);
+    min-width: 0;
     margin: auto;
 }
 
@@ -269,8 +270,8 @@
 @media (max-width: 800px) {
     .welcome-content {
         grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 4rem 0 2rem;
+        gap: 0.5rem;
+        padding: 2.8rem 0 1rem;
     }
 
     .welcome-copy {
@@ -287,13 +288,13 @@
     }
 
     .welcome-portrait {
-        min-height: 46vh;
-        margin-top: -1rem;
+        min-height: clamp(15rem, 44vh, 28rem);
+        margin-top: 0;
     }
 
     .welcome-portrait img {
         width: min(80vw, 390px);
-        max-height: 48vh;
+        max-height: min(48vh, 28rem);
     }
 
     .portrait-label--top {
@@ -318,12 +319,15 @@
     }
 
     .welcome-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.45rem;
         font-size: 0.5rem;
         letter-spacing: 0.1em;
     }
 
     .welcome-portrait {
-        min-height: 38vh;
+        min-height: clamp(13rem, 38vh, 20rem);
     }
 
     .welcome-portrait img {
@@ -332,6 +336,20 @@
 
     .portrait-label {
         font-size: 0.48rem;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 801px) {
+    .welcome-content {
+        gap: 2rem;
+    }
+
+    .welcome-portrait {
+        min-height: 72vh;
+    }
+
+    .welcome-portrait img {
+        max-height: 68vh;
     }
 }
 
