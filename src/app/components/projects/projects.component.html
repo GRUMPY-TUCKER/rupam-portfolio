@@ -1,0 +1,71 @@
+<section id="projects" class="projects section">
+
+    <div class="section-number">
+        03
+    </div>
+
+    <div class="projects-heading">
+
+        <span>SELECTED WORK</span>
+
+        <h2>
+            THINGS
+            <br>
+            I'VE BUILT.
+        </h2>
+
+    </div>
+
+
+    <div class="projects-list">
+
+        @for (project of projects; track project.number) {
+
+        <article class="project-card">
+
+            <div class="project-number">
+                {{ project.number }}
+            </div>
+
+
+            <div class="project-main">
+
+                <h3>
+                    {{ project.title }}
+                </h3>
+
+                <p>
+                    {{ project.description }}
+                </p>
+
+
+                <div class="technologies">
+
+                    @for (
+                    technology of project.technologies;
+                    track technology
+                    ) {
+
+                    <span>
+                        {{ technology }}
+                    </span>
+
+                    }
+
+                </div>
+
+            </div>
+
+
+            <a class="project-arrow" [href]="project.githubLink" target="_blank" rel="noreferrer"
+                aria-label="Open project on GitHub">
+                ↗
+            </a>
+
+        </article>
+
+        }
+
+    </div>
+
+</section>

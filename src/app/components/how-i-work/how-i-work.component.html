@@ -1,0 +1,137 @@
+<section id="how-i-work" class="how-i-work section">
+
+    <div class="section-number">
+        05
+    </div>
+
+    <div class="how-work-heading">
+        <span>HOW I USUALLY INTERACT WHILE WORKING</span>
+        <h2>
+            THINK IN
+            <br>
+            <em>SYSTEMS.</em>
+        </h2>
+        <p>
+            A notification service is never just a send button. I start with the user promise, make the failure modes
+            explicit, and design the smallest system that can keep that promise in production.
+        </p>
+    </div>
+
+    <div class="principal-lens" aria-label="Principal engineering lens">
+
+        <article class="lens-card">
+            <span class="lens-index">01 / CONSTRAINTS</span>
+            <h3>What must be true?</h3>
+            <p>Urgency, ordering, consent, cost, provider limits and data sensitivity shape the design before code does.
+            </p>
+        </article>
+
+        <article class="lens-card">
+            <span class="lens-index">02 / CONTRACTS</span>
+            <h3>Where is the boundary?</h3>
+            <p>Clear event schemas, idempotency keys and ownership rules keep teams from coupling through assumptions.
+            </p>
+        </article>
+
+        <article class="lens-card">
+            <span class="lens-index">03 / OPERATIONS</span>
+            <h3>How do we recover?</h3>
+            <p>Every alert needs an owner, every retry needs a limit, and every migration needs a reversible path.</p>
+        </article>
+
+    </div>
+
+    <div class="conversation-shell">
+
+        <div class="conversation-topbar">
+            <div class="service-identity">
+                <span class="service-mark" aria-hidden="true">N</span>
+                <div>
+                    <strong>notification-service</strong>
+                    <span><i></i> design session · online</span>
+                </div>
+            </div>
+            <span class="conversation-status">LIVE REVIEW</span>
+        </div>
+
+        <div class="conversation-body">
+
+            <div class="message-row message-row--prompt">
+                <span class="message-avatar message-avatar--hm" aria-hidden="true">HM</span>
+                <div class="message message--prompt">
+                    We need email, SMS and push notifications. How would you make it reliable?
+                </div>
+            </div>
+
+            <div class="message-row message-row--reply">
+                <div class="message message--reply">
+                    First, I would write down the <strong>user promise</strong>: accepted is not the same as delivered.
+                    Then I would map failure boundaries and let the API accept intent quickly while workers handle
+                    delivery.
+                </div>
+                <span class="message-avatar message-avatar--rupam" aria-hidden="true">R</span>
+            </div>
+
+            <div class="message-row message-row--prompt">
+                <span class="message-avatar message-avatar--hm" aria-hidden="true">HM</span>
+                <div class="message message--prompt">
+                    What happens when a provider times out or sends the same event twice?
+                </div>
+            </div>
+
+            <div class="message-row message-row--reply">
+                <div class="message message--reply">
+                    Idempotent consumers, bounded retries and a <strong>dead-letter queue</strong>. The event contract
+                    carries an idempotency key, correlation ID and delivery deadline, so recovery is deliberate instead
+                    of mysterious.
+                </div>
+                <span class="message-avatar message-avatar--rupam" aria-hidden="true">R</span>
+            </div>
+
+            <div class="system-card">
+                <div class="system-card-header">
+                    <span class="terminal-dots"><i></i><i></i><i></i></span>
+                    <span>delivery-flow / decision-log</span>
+                    <span class="system-live"><i></i> REVIEWED</span>
+                </div>
+                <div class="system-flow" aria-label="Notification delivery flow">
+                    <span>API</span><b>→</b><span>QUEUE</span><b>→</b><span>WORKER</span><b>→</b><span>PROVIDER</span>
+                </div>
+                <div class="system-metrics">
+                    <span><b>SLO</b> measurable delivery</span>
+                    <span><b>DLQ</b> owned recovery</span>
+                </div>
+            </div>
+
+            <div class="message-row message-row--prompt">
+                <span class="message-avatar message-avatar--hm" aria-hidden="true">HM</span>
+                <div class="message message--prompt">
+                    And how would you know it is working in production?
+                </div>
+            </div>
+
+            <div class="message-row message-row--reply">
+                <div class="message message--reply">
+                    Measure before guessing: structured logs, queue depth, provider latency and alertable SLOs. I would
+                    ship one provider behind a feature flag, replay realistic failures, and expand only when the runbook
+                    and rollback path are proven.
+                </div>
+                <span class="message-avatar message-avatar--rupam" aria-hidden="true">R</span>
+            </div>
+
+        </div>
+
+        <div class="conversation-input">
+            <span>That is how I usually work...</span>
+            <span class="input-cursor" aria-hidden="true"></span>
+        </div>
+
+    </div>
+
+    <div class="how-work-footer">
+        <span>01 / CLARIFY</span>
+        <span>02 / MAKE TRADE-OFFS</span>
+        <span>03 / SHIP, MEASURE, LEARN</span>
+    </div>
+
+</section>

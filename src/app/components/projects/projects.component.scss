@@ -1,0 +1,254 @@
+.projects {
+
+    padding:
+        9rem 6vw 7rem;
+
+    background:
+        #0b0b10;
+
+}
+
+
+.section-number {
+
+    color: #8c7cff;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.projects-heading {
+
+    margin-top: 2rem;
+
+}
+
+
+.projects-heading span {
+
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.projects-heading h2 {
+
+    color: white;
+
+    font-size:
+        clamp(2.8rem, 5vw, 5.5rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+
+}
+
+
+.projects-list {
+
+    margin-top: 4.5rem;
+
+}
+
+
+.project-card {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        80px 1fr 80px;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    padding:
+        2.4rem 0;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    transition:
+        padding 0.4s ease,
+        background 0.4s ease;
+
+}
+
+
+.project-card:last-child {
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+
+.project-card:hover {
+
+    padding-left: 1.5rem;
+
+    padding-right: 1.5rem;
+
+    background:
+        rgba(140, 124, 255, 0.04);
+
+}
+
+
+.project-number {
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-size: 0.75rem;
+
+}
+
+
+.project-main h3 {
+
+    margin: 0;
+
+    color: white;
+
+    font-size:
+        clamp(1.9rem, 3vw, 3.2rem);
+
+    letter-spacing: -0.04em;
+
+}
+
+
+.project-main p {
+
+    max-width: 650px;
+
+    margin-top: 1rem;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    line-height: 1.7;
+
+}
+
+
+.technologies {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    margin-top: 1.5rem;
+
+}
+
+
+.technologies span {
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    padding:
+        0.45rem 0.7rem;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 0.65rem;
+
+}
+
+.project-arrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 52px;
+
+    height: 52px;
+
+    margin-left: auto;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(255, 255, 255, 0.02);
+
+    color: #8c7cff;
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+
+}
+
+.project-arrow:hover {
+
+    transform: translate(-4px, -4px);
+
+    border-color: rgba(140, 124, 255, 0.5);
+
+    box-shadow: 0 12px 24px rgba(140, 124, 255, 0.12);
+
+}
+
+
+.project-card:hover .project-arrow {
+
+    transform:
+        translate(8px, -8px);
+
+}
+
+
+@media (max-width: 700px) {
+
+    .project-card {
+
+        grid-template-columns:
+            40px 1fr;
+
+        gap: 0.9rem;
+
+        padding: 1.8rem 0;
+
+    }
+
+    .project-arrow {
+
+        display: none;
+
+    }
+
+}

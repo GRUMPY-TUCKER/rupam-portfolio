@@ -44,7 +44,20 @@ app.use((req, res, next) => {
     .then((response) =>
       response ? writeResponseToNodeResponse(response, res) : next(),
     )
-    .catch(next);
+    .catch((error) => {
+      if (
+        error &&
+        typeof error === 'object' &&
+        'name' in error &&
+        (error as { name?: string }).name === 'AbortError'
+      ) {
+        res.status(499).end();
+        return;
+      }
+
+      next(error);
+      return;
+    });
 });
 
 /**

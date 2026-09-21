@@ -1,0 +1,239 @@
+.experience {
+
+    padding:
+        9rem 6vw 7rem;
+
+    background:
+        #08080b;
+
+}
+
+
+.section-number {
+
+    color: #8c7cff;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.section-title {
+
+    margin-top: 2rem;
+
+}
+
+
+.section-title span {
+
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.section-title h2 {
+
+    font-size:
+        clamp(2.8rem, 5vw, 5.5rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+
+    color: white;
+
+}
+
+
+.experience-item {
+
+    display: grid;
+
+    grid-template-columns:
+        170px 1fr;
+
+    max-width: 980px;
+
+    margin:
+        4.5rem auto 0;
+
+    padding-top: 2.6rem;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    column-gap: 2.5rem;
+
+}
+
+
+.experience-year {
+
+    color:
+        rgba(255, 255, 255, 0.42);
+
+    font-size: 0.82rem;
+
+    letter-spacing: 0.02em;
+
+    padding-top: 0.25rem;
+
+    white-space: nowrap;
+
+}
+
+
+.experience-header-line {
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 1.2rem;
+
+}
+
+
+.company {
+
+    color: #8c7cff;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+}
+
+
+.experience-content h3 {
+
+    color: white;
+
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+
+    margin:
+        0.8rem 0 0.4rem;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.06em;
+
+}
+
+
+.experience-location {
+
+    margin: 0 0 1.2rem;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-style: italic;
+
+    font-size: 1.05rem;
+
+}
+
+
+.experience-content p {
+
+    max-width: 650px;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    line-height: 1.8;
+
+}
+
+
+.experience-bullets {
+
+    margin: 1.25rem 0 0;
+
+    padding-left: 1.2rem;
+
+    max-width: 700px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    line-height: 1.8;
+
+    display: grid;
+
+    gap: 0.85rem;
+
+}
+
+
+.experience-bullets li {
+
+    margin: 0;
+
+    padding-left: 0.25rem;
+
+}
+
+
+.experience-bullets li::marker {
+
+    color: #8c7cff;
+
+}
+
+
+.experience-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+
+    margin-top: 2rem;
+
+}
+
+
+.experience-tags span {
+
+    padding:
+        0.6rem 0.8rem;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    color:
+        rgba(255, 255, 255, 0.6);
+
+    font-size: 0.7rem;
+
+}
+
+
+@media (max-width: 700px) {
+
+    .experience-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+    }
+
+    .experience-year {
+
+        white-space: normal;
+
+    }
+
+}

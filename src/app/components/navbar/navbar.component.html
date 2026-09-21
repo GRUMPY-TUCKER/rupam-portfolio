@@ -1,0 +1,45 @@
+<nav class="navbar">
+
+    <div class="logo">
+        RUPAM SADHUKHAN<span>.</span>
+    </div>
+
+    <div id="primary-navigation" class="nav-links" [class.nav-links--open]="menuOpen">
+
+        <button (click)="scrollTo('about')">
+            ABOUT
+        </button>
+
+        <button (click)="scrollTo('experience')">
+            EXPERIENCE
+        </button>
+
+        <button (click)="scrollTo('projects')">
+            WORK
+        </button>
+
+        <button (click)="scrollTo('skills')">
+            SKILLS
+        </button>
+
+        <button (click)="scrollTo('how-i-work')">
+            HOW I WORK
+        </button>
+
+        <button (click)="scrollTo('contact')">
+            CONTACT
+        </button>
+
+    </div>
+
+    <a class="hire-button" [href]="hireMeLink" target="_blank" rel="noreferrer">
+        HIRE ME
+        <span>↗</span>
+    </a>
+
+    <button class="menu-button" type="button" [attr.aria-expanded]="menuOpen" aria-controls="primary-navigation"
+        aria-label="Toggle navigation" (click)="toggleMenu()">
+        ☰
+    </button>
+
+</nav>

@@ -1,1 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
+);
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(104, 82, 211, 0.12),
+            transparent 35%),
+        #08080b;
+
+    color: white;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+
+    overflow-x: hidden;
+
+}
+
+
+img,
+svg {
+
+    max-width: 100%;
+
+}
+
+
+button,
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+main {
+
+    display: block;
+
+}
+
+main>* {
+
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    padding-left: clamp(20px, 3vw, 40px);
+
+    padding-right: clamp(20px, 3vw, 40px);
+
+}
+
+
+button,
+input,
+textarea {
+
+    font-family: inherit;
+
+}
+
+
+::selection {
+
+    background:
+        #8c7cff;
+
+    color: white;
+
+}
+
+
+::-webkit-scrollbar {
+
+    width: 5px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #08080b;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #8c7cff;
+
+}
+
+
+.section {
+
+    scroll-margin-top: 80px;
+
+}

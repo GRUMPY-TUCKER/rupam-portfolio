@@ -1,0 +1,52 @@
+<section id="skills" class="skills section">
+
+    <div class="section-number">
+        04
+    </div>
+
+    <div class="skills-heading">
+
+        <span>TECHNOLOGY</span>
+
+        <h2>
+            WHAT I
+            <br>
+            WORK WITH.
+        </h2>
+
+    </div>
+
+
+    <div class="skills-marquee" aria-label="Technologies and skills">
+
+        @for (row of skillRows; track $index) {
+
+        <div class="skill-row" [class.skill-row--reverse]="$index % 2 === 1">
+
+            <div class="skill-track">
+
+                @for (copy of [0, 1]; track copy) {
+
+                @for (skill of row; track skill.name) {
+
+                <div class="skill" [attr.aria-label]="skill.name">
+                    <span class="skill-icon" aria-hidden="true">
+                        <img [src]="skill.icon" [alt]="skill.name" loading="lazy" (error)="hideBrokenIcon($event)" />
+                        <span class="skill-icon-fallback">{{ skill.name.charAt(0) }}</span>
+                    </span>
+                    <span>{{ skill.name }}</span>
+                </div>
+
+                }
+
+                }
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</section>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rupam Sadhukhan | Resume</title>
+    <style>
+        :root {
+            --bg: #0b0d12;
+            --panel: #121722;
+            --panel-2: #171d2a;
+            --text: #edf2ff;
+            --muted: #a7b2c9;
+            --primary: #8c7cff;
+            --line: rgba(255, 255, 255, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(180deg, #0b0d12, #101623);
+            color: var(--text);
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 32px auto;
+            background: rgba(18, 23, 34, 0.96);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(140, 124, 255, 0.16), rgba(255, 255, 255, 0.02));
+            border-bottom: 1px solid var(--line);
+            padding: 32px 40px 24px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            letter-spacing: -0.04em;
+        }
+
+        .subtitle {
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .meta {
+            text-align: right;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .content {
+            padding: 28px 40px 40px;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section h2 {
+            margin: 0 0 14px;
+            font-size: 1.05rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--primary);
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 8px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 24px;
+        }
+
+        .job {
+            margin-bottom: 18px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .job-company {
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .job-date {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        ul {
+            margin: 8px 0 0 18px;
+            padding: 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            background: rgba(140, 124, 255, 0.12);
+            border: 1px solid rgba(140, 124, 255, 0.2);
+            color: var(--text);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+        }
+
+        .project {
+            margin-bottom: 16px;
+        }
+
+        .project strong {
+            font-size: 1rem;
+        }
+
+        .education-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .education-row strong {
+            font-size: 1.05rem;
+        }
+
+        .small-note {
+            color: var(--muted);
+        }
+
+        .download-row {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 18px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: var(--primary);
+            color: #0b0d12;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 760px) {
+
+            .header-top,
+            .two-col,
+            .job-header,
+            .education-row {
+                grid-template-columns: 1fr;
+                display: block;
+            }
+
+            .page {
+                margin: 16px;
+            }
+
+            .header,
+            .content {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .meta {
+                text-align: left;
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="header-top">
+                <div>
+                    <h1>Rupam Sadhukhan</h1>
+                    <div class="subtitle">Software Engineer</div>
+                </div>
+                <div class="meta">
+                    <div>Maharashtra, India</div>
+                    <div>rsadhukhan859@gmail.com</div>
+                    <div>+91 8335974336</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <p style="color: var(--muted); line-height:1.8; margin:0;">
+                    Software engineer with a strong foundation in backend systems, AI-powered applications, and scalable
+                    product development.
+                    Experienced in building robust APIs, optimizing database workflows, and integrating modern
+                    frontend-backend architectures.
+                    Passionate about creating reliable systems that solve real-world problems and improve product
+                    performance.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Experience</h2>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <span class="job-company">Prismforce</span>
+                            <div class="job-title">Associate Software Development Engineer</div>
+                        </div>
+                        <div class="job-date">Feb 2026 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Engineered scalable backend services using Prisma ORM and SQL, improving reliability and
+                            performance for real-time analytics workflows.</li>
+                        <li>Designed and integrated RESTful APIs with an Angular analytics dashboard, enabling scalable
+                            reporting workflows and seamless frontend-backend communication.</li>
+                        <li>Developed modular backend workflows integrating LangGraph and RAG services through
+                            API-driven architecture, improving response accuracy while reducing operational cost.</li>
+                    </ul>
+                    <div class="tag-list">
+                        <span class="tag">Backend</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Prisma</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Angular</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Projects</h2>
+
+                <div class="project">
+                    <strong>Namma Food Platform</strong>
+                    <div class="small-note">Java, Spring Boot, React.js, AWS</div>
+                    <ul>
+                        <li>Architected scalable Spring Boot microservices and REST APIs supporting 1K+ concurrent
+                            users.</li>
+                        <li>Implemented secure JWT authentication and role-based authorization for reliable access
+                            control.</li>
+                        <li>Optimized REST APIs, reducing latency by 35% and automating deployment using Docker and AWS.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <strong>AIVA Mock Interviewer</strong>
+                    <div class="small-note">Python, NLP, Scikit-Learn</div>
+                    <ul>
+                        <li>Developed a modular backend application supporting adaptive interview workflows using
+                            reusable service components.</li>
+                        <li>Designed scalable backend modules that reduced manual effort by 40% while improving
+                            maintainability and extensibility.</li>
+                        <li>Integrated RAG-powered services into backend workflows, improving response quality through
+                            modular API architecture.</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <strong>Project Kshitij</strong>
+                    <div class="small-note">Java, Kafka, Redis, REST APIs</div>
+                    <ul>
+                        <li>Designed a distributed event-driven backend using Kafka and Redis for high-throughput
+                            real-time safety alerts.</li>
+                        <li>Implemented fault-tolerant mechanisms including retry and failover strategies improving
+                            system reliability.</li>
+                        <li>Built scalable REST APIs integrating predictive services into distributed backend
+                            architecture.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Technical Skills</h2>
+                <p style="color: var(--muted); line-height:1.8; margin:0;">
+                    Languages: Java, Python, C++, JavaScript, SQL, HTML5, CSS3 <br>
+                    Frameworks & Web: Spring Boot, React.js, Node.js, Express.js, Django, REST APIs, JWT, Bootstrap <br>
+                    Databases: MySQL, MongoDB, Redis, Prisma ORM <br>
+                    Cloud & DevOps: AWS EC2, Docker, GitHub, Postman <br>
+                    Data Science & AI: LangGraph, LangChain, RAG, LLaMA, Pandas, NumPy, Scikit-learn <br>
+                    Core Computer Science: Data Structures & Algorithms, Object-Oriented Programming, DBMS, Operating
+                    Systems, Computer Networks, Distributed Systems, System Design
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <div class="education-row">
+                    <div>
+                        <strong>Jalpaiguri Government Engineering College</strong>
+                        <div class="small-note">B.Tech in Computer Science and Engineering — CGPA: 9.00/10 [Certificate]
+                        </div>
+                    </div>
+                    <div class="small-note">West Bengal, India<br>Nov 2022 – Jun 2026</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Achievements & Certifications</h2>
+                <ul>
+                    <li>Amazon Machine Learning Summer School 2025 — Selected among the top 2.5% candidates nationwide.
+                    </li>
+                    <li>Smart India Hackathon 2024 Finalist — Ranked among the top 2.4% from 490K+ participants.
+                        [Certificate]</li>
+                    <li>Build With India 2025 Semi-finalist — Selected among top 5000 from 25K+ participants.
+                        [Certificate]</li>
+                </ul>
+            </div>
+
+            <div class="download-row">
+                <a class="download-btn" href="/resume/rupam-sadhukhan-resume.html" download>Download Resume</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
